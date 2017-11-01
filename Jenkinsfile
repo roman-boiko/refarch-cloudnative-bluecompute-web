@@ -57,7 +57,7 @@ podTemplate(label: 'mypod',
                 #Deploy
                 #kubectl set image deployment/\${DEPLOYMENT} web=\${REGISTRY}/\${NAMESPACE}/bluecompute-ce-web:${env.BUILD_NUMBER}
                 #kubectl rollout status deployment/\${DEPLOYMENT}
-                kubectl run --image=\${REGISTRY}/\${NAMESPACE}/bluecompute-ce-web:${env.BUILD_NUMBER} bluecompute-ce-web:${env.BUILD_NUMBER}
+                kubectl run --image=\${REGISTRY}/\${NAMESPACE}/bluecompute-ce-web:${env.BUILD_NUMBER} bluecompute-ce-web-${env.BUILD_NUMBER}
                 """
             }
         }
